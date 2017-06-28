@@ -39,11 +39,8 @@ From REST API Turial and [MDN](https://developer.mozilla.org/es/docs/Web/HTTP/Me
 
 | Method    | CRUD Equivalent  | Safe? | Idempotent? | Success | Failure |
 |-----------|------------------|-------|-------------|---------|---------|
-| `DELETE`  | Delete           |     |     | | |
-| `GET`     | Read             | Yes | Yes | `200` | `400`, `404` |
-| `PATCH`   | Modify / Update  |     |     | | |
-| `POST`    | Create           | No  | No  | `201` | |
-| `PUT`     | Update / Replace | No  | Recommended |`200`, `201`, `204` | |
-| `HEAD`    | NA | | | |
-| `OPTIONS` | NA | | | |
-| `CONNECT` | NA | | | |
+| `DELETE`  | Delete           | No    | Should be   | `200`, `204`, `404`| |
+| `GET`     | Read             | Yes   | Yes         | `200` | `400`, `404` |
+| `PATCH`   | Modify / Update  | No    | No          | | |
+| `POST`    | Create           | No    | No          | `201` | |
+| `PUT`     | Update / Replace | No    | Recommended |`200`, `201`, `204` | `404` |

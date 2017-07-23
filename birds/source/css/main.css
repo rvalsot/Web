@@ -1,0 +1,52 @@
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+body {
+  height: 1280px;
+  margin: auto;
+  width: 1080px;
+}
+
+br{
+  height: 5px;
+}
+
+div{
+  padding: 21px;
+}
+
+form{
+  margin: auto;
+  padding: 21px;
+}
+
+h2 {
+  margin: auto;
+  text-align: center;
+}
+
+input {
+  margin: auto;
+  text-align: center;
+}
+
+table {
+  padding: 8px;
+}
+
+td {
+  text-align: center;
+  width: 100px;
+}
+
+input {
+  width: 120px;
+}
+
+#acceder{
+  margin: auto;
+  width: 720px;
+}

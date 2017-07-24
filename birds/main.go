@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"html/template"
+	"log"
 	"net/http"
 )
 
@@ -18,6 +19,7 @@ func init() {
 
 func main() {
 
+	// TODO: file serving, there is just .gohtml, lacking Javascript
 	http.HandleFunc("/", index)
 	http.HandleFunc("/contabilidad", accountResume)
 	http.HandleFunc("/nidos", nests)
@@ -25,5 +27,8 @@ func main() {
 
 	port := ":8070"
 	fmt.Println("Listening and Serving at port", port)
-	http.ListenAndServe(port, nil)
+	err := http.ListenAndServe(port, nil)
+	if err != nil {
+		log.Println("LAS error:", err)
+	}
 }

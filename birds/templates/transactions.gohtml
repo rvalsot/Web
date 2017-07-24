@@ -9,20 +9,45 @@
 </head>
 
 <body>
-  <form method="post">
-    <select name="fecha">
-      <option value="Hoy"> Hoy </option>
-    </select>
-    <input type="text" name="cuenta_cargada" placeholder="Cuenta cargada" />
-    <input type="text" name="cargo" placeholder="Cargo" />
-    <input type="text" name="cuenta_abonada" placeholder="Cuenta abonada" />
-    <input type="text" name="abono" placeholder="Abono" />
-    <input type="text" name="nota_transaccion" placeholder="Anotación" />
-    <input type="button" value="Registrar" />
-  </form>
-  <button name="otra_transaccion">
-    +
-  </button>
+  <script src="transactions.js"></script>
+
+  <div id="registros">
+    <form id="registry_1" method="post">
+      <input id="fecha" type="date" placeholder="dd/mm/aaaa" />
+
+      <select id="persona">
+        <!-- This should be replaced with a consult from users -->
+        <option  disabled selected>Persona</option>
+        <option value="na" > NA </option>
+        <option value="Antonio" > Antonio </option>
+        <option value="Miguel"  > Miguel  </option>
+        <option value="Rene"    > Rene    </option>
+      </select>
+
+      <select id="cuenta_cargada">
+        <!--TODO: This should be replaced with consult from "accounts" at db -->
+        <option  disabled selected> Cargar  </option>
+        <option value="ingreso"   > Ingreso </option>
+        <option value="egreso"    >  Egreso </option>
+      </select>
+      <input id="cargo" type="text" placeholder="Cargo"/>
+
+      <select id="cuenta_abonada">
+        <!--TODO: This should be replaced with consult from "accounts" at db -->
+        <option  disabled selected> Abonar  </option>
+        <option value="ingreso"   > Ingreso </option>
+        <option value="egreso"    >  Egreso </option>
+      </select>
+      <input id="abono" type="text" placeholder="Abono"/>
+
+      <input id="notas" type="text" placeholder="Notas"/>
+
+      <input type="button" value="Enviar" onClick="putRegistry()"/>
+
+    </form>
+  </div>
+  <button id="another_registry" onClick="addRegistry()">+</button>
+  <button id="put_all" onClick="putAll()"> Enviar todo </button>
 </body>
 
 </html>
